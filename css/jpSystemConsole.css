@@ -478,6 +478,18 @@ body.consoleOn .window.console {
   display: inline-grid !important;
 }
 
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#editor .ace_gutter {
+  display: none;
+}
+
 html, body {
   height: 100%;
 }

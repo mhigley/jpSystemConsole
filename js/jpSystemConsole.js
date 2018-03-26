@@ -2,6 +2,12 @@ var consoleWindow = document.querySelector('.console'),
     osWindow = document.querySelector('.os'),
     chessWindow = document.querySelector('.chess');
 
+
+// Ace Editor
+var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/gob");
+    editor.session.setMode("ace/mode/plain_text");
+
 // Drag & Drop & Resize
 
 interact(consoleWindow)
