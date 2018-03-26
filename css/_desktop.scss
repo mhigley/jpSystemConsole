@@ -1,0 +1,121 @@
+.desktop {
+    display: grid;
+    grid-template-columns: repeat(5, 85px);
+    grid-template-rows: repeat(5, minmax(85px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    // position: relative;
+    p {
+        margin: 0;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    button {
+        border: none;
+        background-image: none;
+        padding: 0;
+        margin: 0;
+    }
+    .nav {
+        display: flex;
+        button {
+            font-weight: 800;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 7px;
+            background-color: transparent;
+            box-sizing: border-box;
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                width: 7px;
+                height: 14px;
+                padding: 2px;
+            }
+            span {
+                box-shadow: .5px .5px 1px 0 $black;
+            }
+            span:first-child {
+                flex: none;
+                width: 100%;
+                height: 2px;
+                border: 1px solid $black;
+                margin-bottom: 2px;
+            }
+            span:last-child {
+                flex: 1;
+                width: 100%;
+                // height: 3px;
+                border: 1px solid $black;
+            }
+        }
+        ul {
+            flex: 1;
+        }
+        li {
+            border-width: 2px;
+            border-style: solid;
+            border-color: $windowLite $windowLite $windowMed $windowDark;
+            background-color: $shortcut;
+            
+        }
+    }
+    .desktopItem.navShortcut {
+        display: flex;
+        flex-direction: column;
+        button {
+            border-width: 2px;
+            border-style: solid;
+            border-color: $windowLite $windowLite $windowMed $windowDark;
+        }
+        img {
+            box-sizing: border-box;
+            width: 100%;
+            flex: none;
+            border-width: 2px;
+            border-style: solid;
+            border-color: $windowLite $windowLite $windowMed $windowDark;
+            box-shadow: 0 0 0 1px $windowBorder;
+        }
+        p {
+            flex: none;
+            background-color: $shortcut;
+            border-width: 1px 1px 2px 2px;
+            border-style: solid;
+            border-color: $windowLite $windowLite $windowMed $windowDark;
+        }
+        &.logo {
+            img {
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .desktopItem.iconShortcut {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        button {
+            background-color: transparent;
+        }
+        p {background-color: $shortcut}
+    }
+
+    .logo {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .dumpster {
+        grid-column: 5;
+        grid-row: 5;
+    }
+}

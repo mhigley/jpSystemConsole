@@ -1,0 +1,21 @@
+@import "imports";
+@import "variables";
+@import "desktop";
+@import "window";
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1;
+    font-size: 14px;
+    background-image: url('../img/irixBackground.png');
+    background-repeat: repeat;
+}
+
+
+
+
+

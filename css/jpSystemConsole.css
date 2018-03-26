@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,200,300,400,500,600,700");
+.desktop {
+  display: grid;
+  grid-template-columns: repeat(5, 85px);
+  grid-template-rows: repeat(5, minmax(85px, 1fr));
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.desktop p {
+  margin: 0;
+}
+
+.desktop ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.desktop button {
+  border: none;
+  background-image: none;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop .nav {
+  display: flex;
+}
+
+.desktop .nav button {
+  font-weight: 800;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.desktop .nav button div {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 7px;
+  height: 14px;
+  padding: 2px;
+}
+
+.desktop .nav button span {
+  box-shadow: 0.5px 0.5px 1px 0 #141414;
+}
+
+.desktop .nav button span:first-child {
+  flex: none;
+  width: 100%;
+  height: 2px;
+  border: 1px solid #141414;
+  margin-bottom: 2px;
+}
+
+.desktop .nav button span:last-child {
+  flex: 1;
+  width: 100%;
+  border: 1px solid #141414;
+}
+
+.desktop .nav ul {
+  flex: 1;
+}
+
+.desktop .nav li {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e0dbd6 #e0dbd6 #848172 #948f89;
+  background-color: darkgray;
+}
+
+.desktop .desktopItem.navShortcut {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop .desktopItem.navShortcut button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e0dbd6 #e0dbd6 #848172 #948f89;
+}
+
+.desktop .desktopItem.navShortcut img {
+  box-sizing: border-box;
+  width: 100%;
+  flex: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e0dbd6 #e0dbd6 #848172 #948f89;
+  box-shadow: 0 0 0 1px #686361;
+}
+
+.desktop .desktopItem.navShortcut p {
+  flex: none;
+  background-color: darkgray;
+  border-width: 1px 1px 2px 2px;
+  border-style: solid;
+  border-color: #e0dbd6 #e0dbd6 #848172 #948f89;
+}
+
+.desktop .desktopItem.navShortcut.logo img {
+  border: none;
+  box-shadow: none;
+}
+
+.desktop .desktopItem.iconShortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop .desktopItem.iconShortcut button {
+  background-color: transparent;
+}
+
+.desktop .desktopItem.iconShortcut p {
+  background-color: darkgray;
+}
+
+.desktop .logo {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.desktop .dumpster {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.window {
+  min-height: 250px;
+  border: 1px solid #686361;
+  display: inline-grid;
+  grid-template-columns: 5px 1fr 5px;
+  grid-template-rows: 5px 1fr 5px;
+}
+
+.window .windowTop {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background-image: linear-gradient(to bottom, #e0dbd6, #948f89);
+  clip-path: polygon(0px 0px, 100% 0px, calc(100% - 5px) 5px, 5px 5px);
+}
+
+.window .windowRight {
+  grid-column: 3;
+  grid-row: 1 / -1;
+  background-image: linear-gradient(to left, #e0dbd6, #948f89);
+  clip-path: polygon(0 5px, 5px 0, 5px 100%, 0px calc(100% - 5px));
+}
+
+.window .windowBottom {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  background-image: linear-gradient(to bottom, #e0dbd6, #948f89);
+  clip-path: polygon(5px 0px, calc(100% - 5px) 0px, 100% 5px, 0px 5px);
+}
+
+.window .windowLeft {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background-image: linear-gradient(to right, #e0dbd6, #948f89);
+  clip-path: polygon(0 0, 5px 5px, 5px calc(100% - 5px), 0px 100%);
+}
+
+.window .windowMain {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid #686361;
+  display: grid;
+  grid-template-columns: 25px 1fr 25px 25px;
+  grid-template-rows: 25px 1fr;
+}
+
+.window .windowMain .drag, .window .windowMain .title, .window .windowMain .min, .window .windowMain .max {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e0dbd6 #848172 #948f89 #e0dbd6;
+  background-color: #bdb8a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+
+.window .windowMain .drag span, .window .windowMain .title span, .window .windowMain .min span, .window .windowMain .max span {
+  display: inline-block;
+}
+
+.window .windowMain .drag span, .window .windowMain .min span, .window .windowMain .max span {
+  border: 1px solid black;
+  box-shadow: 1px 1px 0 black;
+}
+
+.window .windowMain .drag {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.window .windowMain .drag span {
+  width: 100%;
+  height: 3px;
+}
+
+.window .windowMain .title {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-start;
+  font-style: italic;
+}
+
+.window .windowMain .min {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.window .windowMain .min span {
+  width: 3px;
+  height: 3px;
+}
+
+.window .windowMain .max {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.window .windowMain .max span {
+  width: 100%;
+  height: 100%;
+}
+
+.window .windowMain .content {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-height: 400px;
+  padding: 5px;
+  overflow-y: scroll;
+  color: white;
+}
+
+.window.chess .windowMain .content, .window.console .windowMain .content {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.window.chess .windowMain .content p, .window.console .windowMain .content p {
+  margin: 0;
+}
+
+.window.chess {
+  background-color: black;
+  width: calc(100% - 50px);
+  box-sizing: border-box;
+}
+
+.window.chess .title::before {
+  content: "Chess";
+}
+
+.window.chess td {
+  min-width: 55px;
+}
+
+.window.os {
+  background-color: #a8bcbb;
+}
+
+.window.os .title::before {
+  content: "gr_osview";
+}
+
+.window.os .windowMain .content {
+  max-height: none;
+  color: #141414;
+  overflow: hidden;
+}
+
+.window.console {
+  background-color: #203085;
+  width: calc(100% - 50px);
+  box-sizing: border-box;
+}
+
+.window.console .title::before {
+  content: "Central Park Control Console";
+}
+
+.window.display {
+  width: auto;
+  height: auto;
+  min-height: auto;
+}
+
+.window.display .title::before {
+  content: "zebraGirl.jpg";
+}
+
+.window.display .windowMain .content {
+  display: flex;
+  padding: 0;
+  max-height: none;
+  overflow: hidden;
+}
+
+.window.display img {
+  width: 100%;
+  height: 100%;
+}
+
+.window dl, .window dt, .window dd {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.window dl {
+  font-weight: 800;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.window dl .os-output {
+  font-size: 80%;
+  margin-left: auto;
+  padding: 2px 2px 2px 10px;
+}
+
+.window dl .output {
+  display: block;
+  font-size: 80%;
+  margin-left: auto;
+  background-color: #141414;
+  color: white;
+  padding: 2px 2px 2px 10px;
+}
+
+.window dl .output.error {
+  color: red;
+}
+
+.window dl .output.active {
+  color: #1600ff;
+  background-color: white;
+}
+
+.window dt {
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.window dt span {
+  margin-left: 5px;
+}
+
+.window dd {
+  display: flex;
+  min-width: 500px;
+}
+
+.window dd:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.window dd > span {
+  margin-left: 10px;
+}
+
+.window .progress-red {
+  background-color: red;
+}
+
+.window .progress-green {
+  background-color: #0cff00;
+}
+
+.window .progress-blue {
+  background-color: #1600ff;
+}
+
+.window .progress-ltblue {
+  background-color: #00feff;
+}
+
+.window .os-red {
+  color: red;
+}
+
+.window .os-green {
+  color: #0cff00;
+}
+
+.window .os-blue {
+  color: #1600ff;
+}
+
+.window .os-ltblue {
+  color: #00feff;
+}
+
+.window .os-magenta {
+  color: #f415f2;
+}
+
+.window .os-yellow {
+  color: #e2e048;
+}
+
+.window .progress-null {
+  background-color: #b9b5a6;
+}
+
+.window .progress {
+  flex: 1;
+  height: 29px;
+  position: relative;
+  border: 1px solid #141414;
+}
+
+.window .progress span {
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.window [class^='progress-'] {
+  transition: width 1000ms ease-out;
+}
+
+.window.display, .window.os, .window.chess, .window.console {
+  position: absolute;
+}
+
+.window.console {
+  min-height: 40vh;
+  left: 30vw;
+  top: 10vh;
+  z-index: 4;
+}
+
+.window.os {
+  top: 20vh;
+  left: 8vw;
+  z-index: 3;
+}
+
+.window.chess {
+  left: 1vw;
+  bottom: 1vh;
+  z-index: 2;
+}
+
+.window.display {
+  right: 8vw;
+  bottom: 3vh;
+  z-index: 1;
+}
+
+body .window.os,
+body .window.console {
+  display: none !important;
+}
+
+body.osOn .window.os,
+body.consoleOn .window.console {
+  display: inline-grid !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1;
+  font-size: 14px;
+  background-image: url("../img/irixBackground.png");
+  background-repeat: repeat;
+}
+/*# sourceMappingURL=jpSystemConsole.css.map */

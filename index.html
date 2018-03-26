@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jpSystemConsole</title>
+    <link rel="stylesheet" href="css/jpSystemConsole.css">
+</head>
+<body>
+    <div class="desktop">
+        <nav class="desktopItem nav">
+            <ul>
+                <li>
+                    <button>Desktop
+                        <div><span></span><span></span></div>
+                    </button>
+                </li>
+                <li>
+                    <button>Selected
+                        <div><span></span><span></span></div>
+                    </button>
+                </li>
+                <li>
+                    <button>Find
+                        <div><span></span><span></span></div>
+                    </button>
+                </li>
+                <li>
+                    <button>System
+                        <div><span></span><span></span></div>
+                    </button>
+                </li>
+                <li>
+                    <button>Help
+                        <div><span></span><span></span></div>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="desktopItem logo">
+            <img src="img/irix-logo.png" alt="">
+        </div>
+        <div class="desktopItem navShortcut">
+            <button class="consoleBtn">
+                <img src="img/shortcut-console.png" alt="">
+                <p>Console</p>
+            </button>
+        </div>
+        <div class="desktopItem navShortcut">
+            <button class="osBtn">
+                <img src="img/shortcut-system.png" alt="">
+                <p>System</p>
+            </button>
+        </div>
+        <div class="desktopItem iconShortcut dumpster">
+            <button>
+                <img src="img/icon-dumpster.png" alt="">
+                <p>Dumpster</p>
+            </button>
+        </div>
+        
+        <div class="window chess">
+            <div class="windowTop"></div>
+            <div class="windowRight"></div>
+            <div class="windowBottom"></div>
+            <div class="windowLeft"></div>
+            <div class="windowMain">
+                <div class="drag"><span></span></div>
+                <div class="title"><span></span></div>
+                <div class="min"><span></span></div>
+                <div class="max"><span></span></div>
+                <div class="content">
+                    <div>
+                        <p>CHESS: select level of play desired</p>
+                        <table>
+                            <tr>
+                                <td>0.</td>
+                                <td>80</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>694</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td>80</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>213</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>70</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>200</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>60</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>190</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>60</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>240</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>60</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>10</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>60</td>
+                                <td>moves</td>
+                                <td>in</td>
+                                <td>50</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>1</td>
+                                <td>move</td>
+                                <td>in</td>
+                                <td>68</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>1</td>
+                                <td>move</td>
+                                <td>in</td>
+                                <td>96</td>
+                                <td>minutes</td>
+                            </tr>
+                            <tr>
+                                <td>9.</td>
+                                <td>1</td>
+                                <td>move</td>
+                                <td>in</td>
+                                <td>680</td>
+                                <td>minutes</td>
+                            </tr>
+                        </table>
+                        <p>Enter Level: 1</p>
+                        <p>Illegal move</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window os">
+            <div class="windowTop"></div>
+            <div class="windowRight"></div>
+            <div class="windowBottom"></div>
+            <div class="windowLeft"></div>
+            <div class="windowMain">
+                <div class="drag"><span></span></div>
+                <div class="title"><span></span></div>
+                <div class="min"><span></span></div>
+                <div class="max"><span></span></div>
+                <div class="content">
+                    <dl>
+                        <dt>CPU0 Usage: <span class="os-blue">user</span> <span class="os-red">sys</span> <span class="os-yellow">intr</span> <span class="os-ltblue">gfxf</span> <span class="os-magenta">gfxc</span> <span class="os-green">idle</span></dt>
+                        <dd>
+                            <div class="progress progress-green">
+                                <span class="progress-blue" style="width: 30%;"></span>
+                            </div>
+                        </dd>
+
+                        <dt>CPU1 Usage: <span class="os-blue">user</span> <span class="os-red">sys</span> <span class="os-yellow">intr</span> <span class="os-ltblue">gfxf</span> <span class="os-magenta">gfxc</span> <span class="os-green">idle</span></dt>
+                        <dd>
+                            <div class="progress progress-green">
+                                <span class="progress-red" style="width: 40%;"></span>
+                                <span class="progress-blue" style="width: 30%;"></span>
+                            </div>
+                        </dd>
+
+                        <dt>CPU2 Usage: <span class="os-blue">user</span> <span class="os-red">sys</span> <span class="os-yellow">intr</span> <span class="os-ltblue">gfxf</span> <span class="os-magenta">gfxc</span> <span class="os-green">idle</span></dt>
+                        <dd>
+                            <div class="progress progress-green">
+                                <span class="progress-red" style="width: 58%;"></span>
+                                <span class="progress-blue" style="width: 55%;"></span>
+                            </div>
+                        </dd>
+
+                        <dt>CPU3 Usage: <span class="os-blue">user</span> <span class="os-red">sys</span> <span class="os-yellow">intr</span> <span class="os-ltblue">gfxf</span> <span class="os-magenta">gfxc</span> <span class="os-green">idle</span></dt>
+                        <dd>
+                            <div class="progress progress-green">
+                                <span class="progress-red" style="width: 18%;"></span>
+                                <span class="progress-blue" style="width: 15%;"></span>
+                            </div>
+                        </dd>
+
+                        <dt>ReadMemoryPages: <span class="os-ltblue">fs ctl</span> <span class="os-red">fsdirty</span> <span class="os-magenta">fsclean</span> <span class="os-green">free</span> <span class="os-blue">user</span> <span class="output">16384</span></dt>
+                        <dd>
+                            <div class="progress progress-green">
+                                <span class="progress-blue" style="width: 16%;"></span>
+                                <span class="progress-ltblue" style="width: 8%;"></span>
+                            </div>
+                            <span>
+                                <span class="output error">15960</span>
+                                <span class="output active">15539</span>
+                            </span>
+                        </dd>
+
+                        <dt>CPU Wait: <span class="os-blue">io</span> <span class="os-yellow">swap</span> <span class="os-ltblue">pio</span></dt>
+                        <dd>
+                            <div class="progress progress-null">
+                            </div>
+                        </dd>
+
+                        <dt>SysAct 0.2sec: <span class="os-blue">sycall</span> <span class="os-ltblue">switch</span> <span class="os-red">fork</span> <span class="os-yellow">exec</span> <span class="os-magenta">igot</span> <span class="os-output">$000</span></dt>
+                        <dd>
+                            <div class="progress progress-null">
+                                <span class="progress-blue" style="width: 38%;"></span>
+                                <span class="progress-ltblue" style="width: 13%;"></span>
+                            </div>
+                            <span>
+                                <span class="output error">85.5k</span>
+                            </span>
+                        </dd>
+
+                        <dt>Gfx 0.2sec: <span class="os-blue">intr</span> <span class="os-ltblue">swch</span> <span class="os-red">ioctl</span> <span class="os-yellow">swap</span> <span class="os-magenta">fent</span> <span class="os-green">firmont</span> <span class="os-output">1000</span></dt>
+                        <dd>
+                            <div class="progress progress-null">
+                                <span class="progress-ltblue" style="width: 21%;"></span>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="window console">
+            <!-- <div class="consoleDrag"> -->
+                <div class="windowTop"></div>
+                <div class="windowRight"></div>
+                <div class="windowBottom"></div>
+                <div class="windowLeft"></div>
+                <div class="windowMain">
+                    <div class="drag dragHandle"><span></span></div>
+                    <div class="title"><span></span></div>
+                    <div class="min"><span></span></div>
+                    <div class="max"><span></span></div>
+                    <div class="content">
+                        <div>
+                            <p>Jurassic Park, System Security Interface</p>
+                            <p>Version 4.0.5, Alpha E</p>
+                            <p>Ready...</p>
+                            <p contenteditable></p>
+                            <!-- <p>&gt; access security</p>
+                            <p>access: PERMISSION DENIED.</p>
+                            <p>&gt; access security grid</p>
+                            <p>access: PERMISSION DENIED.</p>
+                            <p>&gt; access main security grid</p>
+                            <p>access: PERMISSION DENIED.</p> -->
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+
+        <!--
+        <div class="window display">
+            <div class="windowTop"></div>
+            <div class="windowRight"></div>
+            <div class="windowBottom"></div>
+            <div class="windowLeft"></div>
+            <div class="windowMain">
+                <div class="drag"><span></span></div>
+                <div class="title"><span></span></div>
+                <div class="min"><span></span></div>
+                <div class="max"><span></span></div>
+                <div class="content">
+                    <img src="img/zebraGirl.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        -->
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js"></script>
+    <script src="js/interact.min.js"></script>
+    <script src="js/jpSystemConsole.js"></script>
+</body>
+</html>
