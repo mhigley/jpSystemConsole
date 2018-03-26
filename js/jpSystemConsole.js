@@ -98,21 +98,21 @@ var consoleBtn = document.querySelector('.consoleBtn'),
     consoleMax = document.querySelector('.console .max'),
     osMax = document.querySelector('.os .max');
 
-consoleBtn.addEventListener('click', toggleConsole);
+consoleBtn.addEventListener('dblclick', openConsole);
 consoleMin.addEventListener('click', minWindow);
 consoleMax.addEventListener('click', maxWindow);
 
-osBtn.addEventListener('click', toggleOs);
+osBtn.addEventListener('dblclick', openOs);
 osMin.addEventListener('click', minWindow);
 osMax.addEventListener('click', maxWindow);
 
-function toggleConsole() {
-    document.body.classList.toggle('consoleOn');
+function openConsole() {
+    document.body.classList.add('consoleOn');
     consoleWindow.style.width = '50%';
     consoleWindow.style.height = '250px';
 }
-function toggleOs() {
-    document.body.classList.toggle('osOn');
+function openOs() {
+    document.body.classList.add('osOn');
 }
 function maxWindow(e) {
     var el = e.target.closest('.window'),
