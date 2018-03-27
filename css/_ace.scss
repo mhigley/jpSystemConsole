@@ -4,5 +4,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    .ace_gutter {display: none;}
+    .ace_content {margin-top: 0 !important;}
+    // .ace_content {margin-top: 0 !important; height: 100% !important;}
+    // .ace_gutter {display: none;}
+    .ace_layer.ace_print-margin-layer {display: none;}
+    &.ace-tm {
+        color: inherit;
+        background-color: inherit;
+    }
 }

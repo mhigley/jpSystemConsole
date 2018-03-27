@@ -244,10 +244,10 @@
 .window .windowMain .content {
   grid-column: 1 / -1;
   grid-row: 2;
-  max-height: 400px;
   padding: 5px;
   overflow-y: scroll;
   color: white;
+  position: relative;
 }
 
 .window.chess .windowMain .content, .window.console .windowMain .content {
@@ -486,8 +486,17 @@ body.consoleOn .window.console {
   left: 0;
 }
 
-#editor .ace_gutter {
+#editor .ace_content {
+  margin-top: 0 !important;
+}
+
+#editor .ace_layer.ace_print-margin-layer {
   display: none;
+}
+
+#editor.ace-tm {
+  color: inherit;
+  background-color: inherit;
 }
 
 html, body {

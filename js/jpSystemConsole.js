@@ -2,14 +2,20 @@ var consoleWindow = document.querySelector('.console'),
     osWindow = document.querySelector('.os'),
     chessWindow = document.querySelector('.chess');
 
-
 // Ace Editor
 var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/gob");
-    editor.session.setMode("ace/mode/plain_text");
+editor.session.setMode("ace/mode/plain_text");
+editor.getSession().removeAllListeners("guttermousedown");
+editor.getSession().removeAllListeners("gutterclick");
+editor.getSession().removeAllListeners("gutterdblclick");
+editor.getSession().removeAllListeners("guttermousemove");
+editor.renderer.setShowGutter(false);
+editor.setOptions({
+    // minLines: 25
+    maxLines: Infinity
+});
 
 // Drag & Drop & Resize
-
 interact(consoleWindow)
     .draggable({
         allowFrom: '.drag',
@@ -162,22 +168,17 @@ function getRandomNum () {
 
     setInterval(function(){
         pickBlueProgress = (Math.floor(Math.random() * progressBlue.length) + 0);
-    }, 250);
-    setInterval(function(){
         pickRedProgress = (Math.floor(Math.random() * progressRed.length) + 0);
-    }, 250);
-    setInterval(function(){
         pickLtBlueProgress = (Math.floor(Math.random() * progressLtBlue.length) + 0);
-    }, 250);
+    }, 100);
 
     setInterval(function(){
-        progressBlue[pickBlueProgress].style.width = (Math.floor(Math.random() * 50) + 20) + '%';        
-    }, 1000);
-    setInterval(function(){
-        progressRed[pickRedProgress].style.width = (Math.floor(Math.random() * 65) + 10) + '%';        
-    }, 1000);
-    setInterval(function(){
-        progressLtBlue[pickLtBlueProgress].style.width = (Math.floor(Math.random() * 25) + 5) + '%';        
-    }, 1000);
+        var blue = (Math.floor(Math.random() * 50) + 20),
+            red = (Math.floor(Math.random() * 15) + 5),
+            ltblue = (Math.floor(Math.random() * 25) + 5);
+        progressBlue[pickBlueProgress].style.width = blue + '%';
+        progressRed[pickRedProgress].style.width = (blue + red) + '%';
+        progressLtBlue[pickLtBlueProgress].style.width = ltblue + '%';
+    }, 500);
 }
 getRandomNum();
