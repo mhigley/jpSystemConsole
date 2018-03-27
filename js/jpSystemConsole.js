@@ -4,14 +4,14 @@ var consoleWindow = document.querySelector('.console'),
 
 // Ace Editor
 var editor = ace.edit("editor");
-editor.session.setMode("ace/mode/plain_text");
 editor.getSession().removeAllListeners("guttermousedown");
 editor.getSession().removeAllListeners("gutterclick");
 editor.getSession().removeAllListeners("gutterdblclick");
 editor.getSession().removeAllListeners("guttermousemove");
-editor.renderer.setShowGutter(false);
 editor.setOptions({
-    // minLines: 25
+    theme: './theme/textmate',
+    showGutter: false,
+    // minLines: 25,
     maxLines: Infinity
 });
 
