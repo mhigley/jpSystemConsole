@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,200,300,400,500,600,700");
 .desktop {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(5, 85px);
-  grid-template-rows: repeat(5, minmax(85px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 85px));
+  grid-template-rows: repeat(auto-fill, minmax(85px, max-content));
   grid-gap: 10px;
   padding: 10px;
 }
@@ -134,8 +137,9 @@
 }
 
 .desktop .dumpster {
-  grid-column: 5;
-  grid-row: 5;
+  transition: all 100ms;
+  grid-column: calc(-1 - 1);
+  grid-row: calc(-1 - 1);
 }
 
 .window {
@@ -501,6 +505,7 @@ body.consoleOn .window.console {
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
