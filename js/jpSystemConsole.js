@@ -1,3 +1,5 @@
+/* 
+
 var consoleWindow = document.querySelector('.console'),
     osWindow = document.querySelector('.os'),
     chessWindow = document.querySelector('.chess');
@@ -131,9 +133,6 @@ function maxWindow(e) {
         whichWindow = el.classList[1],
         thisWindow = document.querySelector(`.${whichWindow}`);
 
-    // var stringy = JSON.stringify({"first":"Matt","last":"Higley"});
-    // console.log(stringy);
-
     thisWindow.dataset.x = 0;
     thisWindow.dataset.y = 0;
 
@@ -150,7 +149,6 @@ function minWindow(e) {
 
     var dataVals = thisWindow.data;
     console.log(dataVals);
-    // var stringy = 
 
     document.body.classList.toggle(whichWindow + 'On');
     thisWindow.style.width = '50%';
@@ -182,3 +180,13 @@ function getRandomNum () {
     }, 500);
 }
 getRandomNum();
+*/
+
+
+var windows = {
+
+};
+
+const windowOS = {
+    name: ''
+}
